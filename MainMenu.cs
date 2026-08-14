@@ -22,7 +22,6 @@ public class MainMenu {
     /// <summary>
     /// Gets the main menu's output.
     /// </summary>
-    /// <returns></returns>
     public string GetMainMenu() {
         string output = "";
         foreach (var menuItem in this.mainMenuItems) {
