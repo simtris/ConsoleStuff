@@ -8,6 +8,7 @@ public class Program {
     /// Program entry point.
     /// </summary>
     public static void Main(string[] args) {
-        IOManager.StartMainLoop();
+        var mainMenu = new MainMenu();
+        mainMenu.StartLoop();
     }
 }
