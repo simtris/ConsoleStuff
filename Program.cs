@@ -9,6 +9,6 @@ public class Program {
     /// </summary>
     public static void Main(string[] args) {
         var mainMenu = new MainMenu();
-        mainMenu.StartLoop();
+        mainMenu.Open();
     }
 }

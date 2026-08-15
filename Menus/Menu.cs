@@ -15,9 +15,9 @@ public abstract class Menu {
     private bool exit;
 
     /// <summary>
-    /// Start the menu's loop.
+    /// Open the menu.
     /// </summary>
-    public void StartLoop() {
+    public void Open() {
         while (!this.exit) {
             Console.WriteLine(GetOutput());
             if(int.TryParse(Console.ReadLine(), out int input)) {
