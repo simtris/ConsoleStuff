@@ -9,8 +9,8 @@ public class MainMenu : Menu {
     /// Constructor.
     /// </summary>
     public MainMenu() {
-        this.menuItems = new Dictionary<int, ICommand>() {
-            { 0, new ExitCommand()}
+        this.menuItems = new Dictionary<int, Command>() {
+            { 0, new ExitCommand(this)}
         };
     }
 }

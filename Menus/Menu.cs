@@ -7,7 +7,7 @@ public abstract class Menu {
     /// <summary>
     /// Maps menu items's input value to their output text.
     /// </summary>
-    protected Dictionary<int, ICommand> menuItems;
+    protected Dictionary<int, Command> menuItems;
 
     /// <summary>
     /// Whether this menu should exit its loop
@@ -20,8 +20,19 @@ public abstract class Menu {
     public void StartLoop() {
         while (!this.exit) {
             Console.WriteLine(GetOutput());
-            Console.ReadLine();
+            if(int.TryParse(Console.ReadLine(), out int input)) {
+                if (this.menuItems.TryGetValue(input, out var value)) {
+                    value.Execute();
+                }
+            }
         }
+    }
+
+    /// <summary>
+    /// Exit this menu.
+    /// </summary>
+    public void Exit() {
+        this.exit = true;
     }
 
     /// <summary>
@@ -30,7 +41,7 @@ public abstract class Menu {
     private string GetOutput() {
         string output = "";
         foreach (var menuItem in this.menuItems) {
-            output += $"{menuItem.Key} - {menuItem.Value}\n";
+            output += $"{menuItem.Key} - {menuItem.Value.Name}\n";
         }
 
         return output;
