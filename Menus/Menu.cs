@@ -39,7 +39,7 @@ public abstract class Menu {
     /// Gets the menu's output.
     /// </summary>
     private string GetOutput() {
-        string output = "";
+        string output = "\n";
         foreach (var menuItem in this.menuItems) {
             output += $"{menuItem.Key} - {menuItem.Value.Name}\n";
         }

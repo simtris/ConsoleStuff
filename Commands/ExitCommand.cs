@@ -8,7 +8,6 @@ public class ExitCommand : Command {
     /// <summary>
     /// Constructor.
     /// </summary>
-    /// <param name="menu"></param>
     public ExitCommand(Menu menu) {
         this.menu = menu;
     }
