@@ -15,7 +15,7 @@ public class JournalMainMenu : Menu
     {
         this.menuItems = new Dictionary<int, Command>() {
             {0, new ExitMenuCommand(this)},
-            {1, new ListJournalEntriesCommand(this)},
+            {1, new OpenJournalEntryCommand(this)},
             {2, new CreateJournalEntryCommand(this)},
         };
     }

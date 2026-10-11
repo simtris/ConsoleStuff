@@ -3,15 +3,14 @@
 namespace ConsoleStuff.Commands.Journal;
 
 /// <summary>
-/// Command to list the existing journal entries
+/// Command to open a journal entry. First list all entries, then display the selected one.
 /// </summary>
-public class ListJournalEntriesCommand : Command
+public class OpenJournalEntryCommand : Command
 {
-
     /// <summary>
     /// Constructor.
     /// </summary>
-    public ListJournalEntriesCommand(Menu menu)
+    public OpenJournalEntryCommand(Menu menu)
     {
         this.menu = menu;
     }
@@ -19,14 +18,14 @@ public class ListJournalEntriesCommand : Command
     /// <summary>
     /// The command's name
     /// </summary>
-    public override string Name => "List journal entries";
+    public override string Name => "Open Journal Entry";
 
     /// <summary>
     /// Execute the command.
     /// </summary>
     public override void Execute()
     {
-        var journalEntriesMenu = new JournalEntriesMenu();
+        var journalEntriesMenu = new JournalEntriesMenu((menu, entryName) => new DisplayJournalEntryCommand(menu, entryName));
         journalEntriesMenu.Open();
     }
 }
