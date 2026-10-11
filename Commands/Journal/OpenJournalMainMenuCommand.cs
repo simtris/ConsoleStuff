@@ -1,17 +1,21 @@
-﻿namespace ConsoleStuff;
+﻿using ConsoleStuff.Menus.Journal;
+
+namespace ConsoleStuff.Commands.Journal;
 
 /// <summary>
-/// Command to show the journal main menu
+/// Command to open the journal main menu
 /// </summary>
-public class JournalMainMenuCommand : Command {
+public class OpenJournalMainMenuCommand : Command
+{
 
     /// <summary>
     /// Constructor.
     /// </summary>
-    public JournalMainMenuCommand(Menu menu) {
+    public OpenJournalMainMenuCommand(Menu menu)
+    {
         this.menu = menu;
     }
-    
+
     /// <summary>
     /// The command's name
     /// </summary>
@@ -20,7 +24,8 @@ public class JournalMainMenuCommand : Command {
     /// <summary>
     /// Execute the command.
     /// </summary>
-    public override void Execute() {
+    public override void Execute()
+    {
         var journalMainMenu = new JournalMainMenu();
         journalMainMenu.Open();
     }

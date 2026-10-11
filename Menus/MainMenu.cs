@@ -1,4 +1,6 @@
-﻿namespace ConsoleStuff;
+﻿using ConsoleStuff.Commands.Journal;
+
+namespace ConsoleStuff;
 
 /// <summary>
 /// Handles the main menu.
@@ -10,8 +12,8 @@ public class MainMenu : Menu {
     /// </summary>
     public MainMenu() {
         this.menuItems = new Dictionary<int, Command>() {
-            {0, new ExitCommand(this)},
-            {1, new JournalMainMenuCommand(this)},
+            {0, new ExitMenuCommand(this)},
+            {1, new OpenJournalMainMenuCommand(this)},
         };
     }
 }

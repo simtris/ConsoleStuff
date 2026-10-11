@@ -1,0 +1,6 @@
+﻿- Back instead of exit when not main menu
+- Menu titles
+- Delete entry
+- Add exit command to all menus by default
+- List journal entry => Open journal entry (as in list then select one to open)
+	- Also the Journal entries menu constructor could take a type as param (or <T>) to decide what the selection does, so easy to do for ex. delete)

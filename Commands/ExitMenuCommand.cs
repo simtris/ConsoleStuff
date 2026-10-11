@@ -1,14 +1,14 @@
 ﻿namespace ConsoleStuff;
 
 /// <summary>
-/// Command to exit the program
+/// Command to exit a menu
 /// </summary>
-public class ExitCommand : Command {
+public class ExitMenuCommand : Command {
 
     /// <summary>
     /// Constructor.
     /// </summary>
-    public ExitCommand(Menu menu) {
+    public ExitMenuCommand(Menu menu) {
         this.menu = menu;
     }
     
