@@ -10,11 +10,11 @@ public class JournalEntriesMenu : Menu {
     /// </summary>
     public JournalEntriesMenu() {
         this.menuItems = [];
+        this.menuItems[0] = new ExitCommand(this);
         
         string[] files = Directory.GetFiles(Constants.journalFolderPath, "*.txt");
         for (int i = 0; i < files.Length; i++) {
-            this.menuItems[i] = new DisplayJournalEntryCommand(this, files[i].Split("\\").Last());
+            this.menuItems[i + 1] = new DisplayJournalEntryCommand(this, files[i].Split("\\").Last());
         }
-        this.menuItems[files.Length] = new ExitCommand(this);
     }
 }

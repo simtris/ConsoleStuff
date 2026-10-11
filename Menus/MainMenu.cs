@@ -10,8 +10,8 @@ public class MainMenu : Menu {
     /// </summary>
     public MainMenu() {
         this.menuItems = new Dictionary<int, Command>() {
-            {0, new JournalMainMenuCommand(this)},
-            {1, new ExitCommand(this)}
+            {0, new ExitCommand(this)},
+            {1, new JournalMainMenuCommand(this)},
         };
     }
 }
