@@ -11,7 +11,7 @@ public class JournalMainMenu : Menu
     /// <summary>
     /// Constructor.
     /// </summary>
-    public JournalMainMenu() : base("Journal Menu") { 
+    public JournalMainMenu() : base("Journal Menu", belongToMainMenu: false) { 
         this.menuItems[1] = new OpenJournalEntryCommand(this);
         this.menuItems[2] = new CreateJournalEntryCommand(this);
     }

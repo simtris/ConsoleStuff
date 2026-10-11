@@ -10,7 +10,7 @@ public class JournalEntriesMenu : Menu
     /// <summary>
     /// Constructor.
     /// </summary>
-    public JournalEntriesMenu(string name, Func<Menu, string, Command> actionOnSelect) : base(name) {
+    public JournalEntriesMenu(string name, Func<Menu, string, Command> actionOnSelect) : base(name, belongToMainMenu: false) {
         string[] files = Directory.GetFiles(Constants.journalFolderPath, "*.txt");
         for (int i = 0; i < files.Length; i++)
         {

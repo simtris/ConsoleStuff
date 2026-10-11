@@ -10,7 +10,7 @@ public class MainMenu : Menu {
     /// <summary>
     /// Constructor.
     /// </summary>
-    public MainMenu() : base("Main Menu") {
+    public MainMenu() : base("Main Menu", belongToMainMenu: true) {
         this.menuItems[1] = new OpenJournalMainMenuCommand(this);
     }
 }

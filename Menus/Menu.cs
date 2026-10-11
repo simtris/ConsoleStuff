@@ -19,10 +19,10 @@ public abstract class Menu {
     /// </summary>
     protected string name;
 
-    public Menu(string name) {
+    public Menu(string name, bool belongToMainMenu) {
         this.name = name;
         this.menuItems = new Dictionary<int, Command>() {
-            {0, new ExitMenuCommand(this)},
+            {0, new ExitMenuCommand(this, belongToMainMenu)},
         };
     }
 
