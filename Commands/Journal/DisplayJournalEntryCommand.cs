@@ -23,7 +23,7 @@ public class DisplayJournalEntryCommand : Command
     /// <summary>
     /// The command's name
     /// </summary>
-    public override string Name => journalEntryFileName;
+    public override string Name => this.journalEntryFileName;
 
     /// <summary>
     /// Execute the command.
@@ -31,7 +31,7 @@ public class DisplayJournalEntryCommand : Command
     public override void Execute()
     {
         Console.Clear();
-        string fullPath = Path.Combine(Constants.journalFolderPath, journalEntryFileName);
+        string fullPath = Path.Combine(Constants.journalFolderPath, this.journalEntryFileName);
 
         if (File.Exists(fullPath))
         {
