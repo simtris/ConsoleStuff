@@ -10,10 +10,7 @@ public class MainMenu : Menu {
     /// <summary>
     /// Constructor.
     /// </summary>
-    public MainMenu() {
-        this.menuItems = new Dictionary<int, Command>() {
-            {0, new ExitMenuCommand(this)},
-            {1, new OpenJournalMainMenuCommand(this)},
-        };
+    public MainMenu() : base("Main Menu") {
+        this.menuItems[1] = new OpenJournalMainMenuCommand(this);
     }
 }

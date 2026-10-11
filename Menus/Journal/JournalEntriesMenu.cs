@@ -10,11 +10,7 @@ public class JournalEntriesMenu : Menu
     /// <summary>
     /// Constructor.
     /// </summary>
-    public JournalEntriesMenu(Func<Menu, string, Command> actionOnSelect)
-    {
-        this.menuItems = [];
-        this.menuItems[0] = new ExitMenuCommand(this);
-
+    public JournalEntriesMenu(string name, Func<Menu, string, Command> actionOnSelect) : base(name) {
         string[] files = Directory.GetFiles(Constants.journalFolderPath, "*.txt");
         for (int i = 0; i < files.Length; i++)
         {

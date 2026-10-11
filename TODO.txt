@@ -1,4 +1,2 @@
 ﻿- Back instead of exit when not main menu
-- Menu titles
 - Delete entry
-- Add exit command to all menus by default

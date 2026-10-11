@@ -11,12 +11,8 @@ public class JournalMainMenu : Menu
     /// <summary>
     /// Constructor.
     /// </summary>
-    public JournalMainMenu()
-    {
-        this.menuItems = new Dictionary<int, Command>() {
-            {0, new ExitMenuCommand(this)},
-            {1, new OpenJournalEntryCommand(this)},
-            {2, new CreateJournalEntryCommand(this)},
-        };
+    public JournalMainMenu() : base("Journal Menu") { 
+        this.menuItems[1] = new OpenJournalEntryCommand(this);
+        this.menuItems[2] = new CreateJournalEntryCommand(this);
     }
 }

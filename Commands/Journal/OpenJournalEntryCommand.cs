@@ -25,7 +25,7 @@ public class OpenJournalEntryCommand : Command
     /// </summary>
     public override void Execute()
     {
-        var journalEntriesMenu = new JournalEntriesMenu((menu, entryName) => new DisplayJournalEntryCommand(menu, entryName));
+        var journalEntriesMenu = new JournalEntriesMenu(this.Name, (menu, entryName) => new DisplayJournalEntryCommand(menu, entryName));
         journalEntriesMenu.Open();
     }
 }

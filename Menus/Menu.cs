@@ -15,6 +15,18 @@ public abstract class Menu {
     private bool exit;
 
     /// <summary>
+    /// This menu's name.
+    /// </summary>
+    protected string name;
+
+    public Menu(string name) {
+        this.name = name;
+        this.menuItems = new Dictionary<int, Command>() {
+            {0, new ExitMenuCommand(this)},
+        };
+    }
+
+    /// <summary>
     /// Open the menu.
     /// </summary>
     public void Open() {
@@ -40,7 +52,7 @@ public abstract class Menu {
     /// Gets the menu's output.
     /// </summary>
     private string GetOutput() {
-        string output = "\n";
+        string output = $"\n{this.name}\n";
         foreach (var menuItem in this.menuItems) {
             output += $"{menuItem.Key} - {menuItem.Value.Name}\n";
         }
