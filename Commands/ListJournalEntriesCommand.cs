@@ -1,29 +1,27 @@
 ﻿namespace ConsoleStuff;
 
 /// <summary>
-/// Command to show the journal menu
+/// Command to list the existing journal entries
 /// </summary>
-public class JournalMenuCommand : Command {
-
-    private JournalMenu journalMenu;
+public class ListJournalEntriesCommand : Command {
 
     /// <summary>
     /// Constructor.
     /// </summary>
-    public JournalMenuCommand(Menu menu) {
+    public ListJournalEntriesCommand(Menu menu) {
         this.menu = menu;
     }
     
     /// <summary>
     /// The command's name
     /// </summary>
-    public override string Name => "Journal";
+    public override string Name => "List journal entries";
 
     /// <summary>
     /// Execute the command.
     /// </summary>
     public override void Execute() {
-        this.journalMenu = new();
-        this.journalMenu.Open();
+        var journalEntriesMenu = new JournalEntriesMenu();
+        journalEntriesMenu.Open();
     }
 }

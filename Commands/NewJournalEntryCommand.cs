@@ -21,7 +21,7 @@ public class NewJournalEntryCommand : Command {
     /// Execute the command.
     /// </summary>
     public override void Execute() {
-        string fileName = DateTime.Now.ToString("yyyyMMdd-HHmm") + ".txt";
+        string fileName = DateTime.Now.ToString("yyyyMMdd_HHmm") + ".txt";
         string fullPath = Path.Combine(Constants.journalFolderPath, fileName);
         File.WriteAllText(fullPath, string.Empty);
 

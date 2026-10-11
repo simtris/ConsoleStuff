@@ -1,17 +1,17 @@
 ﻿namespace ConsoleStuff;
 
 /// <summary>
-/// Handles the journal menu.
+/// Handles the journal main menu.
 /// </summary>
-public class JournalMenu : Menu {
+public class JournalMainMenu : Menu {
 
     /// <summary>
     /// Constructor.
     /// </summary>
-    public JournalMenu() {
+    public JournalMainMenu() {
         this.menuItems = new Dictionary<int, Command>() {
-            {0, new NewJournalEntryCommand(this)},
-            {1, new ListJournalEntryCommand(this)},
+            {0, new ListJournalEntriesCommand(this)},
+            {1, new NewJournalEntryCommand(this)},
             {2, new ExitCommand(this)}
         };
     }
