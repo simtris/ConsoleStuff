@@ -27,6 +27,7 @@ public class DisplayJournalEntryCommand : Command {
     /// Execute the command.
     /// </summary>
     public override void Execute() {
+        Console.Clear();
         string fullPath = Path.Combine(Constants.journalFolderPath, this.journalEntryFileName);
 
         if (File.Exists(fullPath)) {
@@ -35,5 +36,6 @@ public class DisplayJournalEntryCommand : Command {
         } else {
             Console.WriteLine("File not found: " + fullPath);
         }
+        Console.ReadLine();
     }
 }

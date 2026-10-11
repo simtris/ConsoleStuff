@@ -26,6 +26,7 @@ public class NewJournalEntryCommand : Command {
         File.WriteAllText(fullPath, string.Empty);
 
         using StreamWriter writer = new(fullPath);
+        Console.Clear();
         Console.WriteLine("Enter !wq to save and quit entry.");
         while (true) {
             

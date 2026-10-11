@@ -19,6 +19,7 @@ public abstract class Menu {
     /// </summary>
     public void Open() {
         while (!this.exit) {
+            Console.Clear();
             Console.WriteLine(GetOutput());
             if(int.TryParse(Console.ReadLine(), out int input)) {
                 if (this.menuItems.TryGetValue(input, out var value)) {
